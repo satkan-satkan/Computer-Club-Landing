@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ESCAPE — Компьютерный Клуб</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav__logo">
+      <span class="nav__logo-text">ESC<span class="accent">APE</span></span>
+    </div>
+    <ul class="nav__links">
+      <li><a href="#about">О нас</a></li>
+      <li><a href="#features">Возможности</a></li>
+      <li><a href="#zones">Зоны</a></li>
+      <li><a href="#pricing">Цены</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+    <a href="#pricing" class="nav__cta">Забронировать</a>
+    <button class="nav__burger" id="burger" aria-label="menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__video-wrap">
+      <video class="hero__video" autoplay muted loop playsinline>
+        <source src="hero_loop.mp4" type="video/mp4" />
+      </video>
+      <div class="hero__overlay"></div>
+    </div>
+
+    <div class="hero__content">
+      <div class="hero__badge reveal-up">Добро пожаловать в другое измерение</div>
+      <h1 class="hero__title reveal-up">
+        ESCAPE<br/>
+        <span class="hero__subtitle-line">Твоя реальность — <em>здесь</em></span>
+      </h1>
+      <p class="hero__desc reveal-up">
+        Погрузись в мир без границ. Высококлассные ПК, VR-пространство,<br/>
+        турниры и атмосфера, которая затягивает навсегда.
+      </p>
+      <div class="hero__actions reveal-up">
+        <a href="#pricing" class="btn btn--primary">Начать играть</a>
+        <a href="#about" class="btn btn--ghost">Узнать больше</a>
+      </div>
+    </div>
+
+    <div class="hero__scroll">
+      <span>Прокрути вниз</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+
+    <!-- floating particles -->
+    <canvas class="hero__particles" id="particles"></canvas>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats">
+    <div class="stats__grid">
+      <div class="stat-item reveal-up">
+        <span class="stat-item__num" data-target="120">0</span>
+        <span class="stat-item__label">Топовых ПК</span>
+      </div>
+      <div class="stat-item reveal-up">
+        <span class="stat-item__num" data-target="24">0</span>
+        <span class="stat-item__label">Часа / 7 дней</span>
+      </div>
+      <div class="stat-item reveal-up">
+        <span class="stat-item__num" data-target="5000">0</span>
+        <span class="stat-item__label">Игроков в месяц</span>
+      </div>
+      <div class="stat-item reveal-up">
+        <span class="stat-item__num" data-target="8">0</span>
+        <span class="stat-item__label">VR-кабинок</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__visual reveal-left">
+          <div class="about__img-wrap">
+            <div class="about__glow"></div>
+            <div class="about__monitor">
+              <div class="monitor__screen">
+                <div class="monitor__scanline"></div>
+                <div class="monitor__text">
+                  <span class="type-text" id="typeText"></span>
+                  <span class="cursor">|</span>
+                </div>
+              </div>
+              <div class="monitor__base"></div>
+            </div>
+          </div>
+        </div>
+        <div class="about__copy reveal-right">
+          <div class="section__label">О клубе</div>
+          <h2 class="section__title">Это больше чем<br/><span class="accent">игровой клуб</span></h2>
+          <p>ESCAPE — это пространство, где технологии встречаются с культурой. Мы создали место, где каждый — от casual-геймера до профессионального игрока — чувствует себя дома.</p>
+          <p>Наши машины работают на железе уровня турнирного ПК. Мониторы 240 Гц, периферия Razer и SteelSeries, интернет без задержек — всё для победы.</p>
+          <ul class="about__list">
+            <li><span class="check"></span>RTX 4090 в каждом сегменте PRO</li>
+            <li><span class="check"></span>Ультра-низкий пинг — выделенный канал</li>
+            <li><span class="check"></span>Кухня и бар прямо в зале</li>
+            <li><span class="check"></span>Бесплатный коучинг по CS2 и Dota 2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES ===== -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section__head reveal-up">
+        <div class="section__label">Возможности</div>
+        <h2 class="section__title">Всё что нужно<br/><span class="accent">для игры</span></h2>
+      </div>
+      <div class="features__grid">
+        <div class="feature-card reveal-up" style="--delay:0s">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="4" y="10" width="40" height="28" rx="3" stroke="currentColor" stroke-width="2"/><path d="M16 38v4M32 38v4M12 42h24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="6" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Топовые ПК</h3>
+          <p>RTX 4090, i9-13900K, 64 ГБ DDR5. Ультра-настройки в любой игре без компромиссов.</p>
+        </div>
+        <div class="feature-card reveal-up" style="--delay:.1s">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 4C13 4 4 13 4 24s9 20 20 20 20-9 20-20S35 4 24 4z" stroke="currentColor" stroke-width="2"/><path d="M24 12v12l8 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Работаем 24/7</h3>
+          <p>Никаких ограничений по времени. Играй ночью, утром, в праздники — мы всегда открыты.</p>
+        </div>
+        <div class="feature-card reveal-up" style="--delay:.2s">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 20h32M8 28h32" stroke="currentColor" stroke-width="2"/><rect x="4" y="12" width="40" height="24" rx="3" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="20" r="2" fill="currentColor"/><circle cx="16" cy="28" r="2" fill="currentColor"/></svg>
+          </div>
+          <h3>VR-Зона</h3>
+          <p>Meta Quest 3 и Valve Index. Полное погружение в виртуальную реальность прямо в клубе.</p>
+        </div>
+        <div class="feature-card reveal-up" style="--delay:.3s">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 6l4 12h12L30 26l4 12-10-8-10 8 4-12L8 18h12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>Турниры</h3>
+          <p>Еженедельные турниры с призовым фондом. Докажи, что ты лучший в ESCAPE.</p>
+        </div>
+        <div class="feature-card reveal-up" style="--delay:.4s">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M6 14h36v24H6z" stroke="currentColor" stroke-width="2" rx="2"/><path d="M6 20h36M16 14v6M32 14v6" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Приватные кабинки</h3>
+          <p>Закрытые стримерские боксы с профессиональным освещением и звукоизоляцией.</p>
+        </div>
+        <div class="feature-card reveal-up" style="--delay:.5s">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 4c-5.5 0-10 4.5-10 10 0 3.8 2 7.1 5 8.9V28h10v-5.1c3-1.8 5-5.1 5-8.9 0-5.5-4.5-10-10-10z" stroke="currentColor" stroke-width="2"/><path d="M18 28v8a2 2 0 002 2h8a2 2 0 002-2v-8" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+          <h3>Коучинг</h3>
+          <p>Сессии с профессиональными игроками. Прокачай скилл под руководством экспертов.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ZONES ===== -->
+  <section class="zones section" id="zones">
+    <div class="container">
+      <div class="section__head reveal-up">
+        <div class="section__label">Пространство</div>
+        <h2 class="section__title">Выбери свою <span class="accent">зону</span></h2>
+      </div>
+      <div class="zones__list">
+        <div class="zone-item reveal-up" style="--delay:0s">
+          <div class="zone-item__num">01</div>
+          <div class="zone-item__info">
+            <h3>STANDARD</h3>
+            <p>60 мест · i7 + RTX 3080 · 144 Гц</p>
+          </div>
+          <div class="zone-item__bar"><div class="zone-item__fill" style="--w:60%"></div></div>
+          <div class="zone-item__tag">Casual</div>
+        </div>
+        <div class="zone-item reveal-up" style="--delay:.1s">
+          <div class="zone-item__num">02</div>
+          <div class="zone-item__info">
+            <h3>PRO</h3>
+            <p>40 мест · i9 + RTX 4090 · 240 Гц</p>
+          </div>
+          <div class="zone-item__bar"><div class="zone-item__fill" style="--w:80%"></div></div>
+          <div class="zone-item__tag">Pro</div>
+        </div>
+        <div class="zone-item reveal-up" style="--delay:.2s">
+          <div class="zone-item__num">03</div>
+          <div class="zone-item__info">
+            <h3>VR ARENA</h3>
+            <p>8 кабинок · Meta Quest 3 + Valve Index</p>
+          </div>
+          <div class="zone-item__bar"><div class="zone-item__fill" style="--w:90%"></div></div>
+          <div class="zone-item__tag">Immersive</div>
+        </div>
+        <div class="zone-item reveal-up" style="--delay:.3s">
+          <div class="zone-item__num">04</div>
+          <div class="zone-item__info">
+            <h3>STREAMER BOX</h3>
+            <p>12 приватных кабинок · Полный стрим-сет</p>
+          </div>
+          <div class="zone-item__bar"><div class="zone-item__fill" style="--w:45%"></div></div>
+          <div class="zone-item__tag">Creator</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRICING ===== -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section__head reveal-up">
+        <div class="section__label">Тарифы</div>
+        <h2 class="section__title">Прозрачные <span class="accent">цены</span></h2>
+      </div>
+      <div class="pricing__grid">
+        <div class="price-card reveal-up" style="--delay:0s">
+          <div class="price-card__header">
+            <div class="price-card__name">STANDARD</div>
+            <div class="price-card__price">
+              <span class="price-card__amount">800</span>
+              <span class="price-card__unit">₸/час</span>
+            </div>
+          </div>
+          <ul class="price-card__features">
+            <li>i7 + RTX 3080</li>
+            <li>Монитор 144 Гц</li>
+            <li>Стандартная периферия</li>
+            <li>Доступ к Steam библиотеке</li>
+            <li class="disabled">Приоритетная бронь</li>
+            <li class="disabled">Персональный коуч</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost w-full">Выбрать</a>
+        </div>
+        <div class="price-card price-card--featured reveal-up" style="--delay:.1s">
+          <div class="price-card__badge">Популярный</div>
+          <div class="price-card__header">
+            <div class="price-card__name">PRO</div>
+            <div class="price-card__price">
+              <span class="price-card__amount">1200</span>
+              <span class="price-card__unit">₸/час</span>
+            </div>
+          </div>
+          <ul class="price-card__features">
+            <li>i9 + RTX 4090</li>
+            <li>Монитор 240 Гц IPS</li>
+            <li>Razer / SteelSeries периферия</li>
+            <li>Доступ ко всей библиотеке</li>
+            <li>Приоритетная бронь</li>
+            <li class="disabled">Персональный коуч</li>
+          </ul>
+          <a href="#contact" class="btn btn--primary w-full">Выбрать</a>
+        </div>
+        <div class="price-card reveal-up" style="--delay:.2s">
+          <div class="price-card__header">
+            <div class="price-card__name">UNLIMITED</div>
+            <div class="price-card__price">
+              <span class="price-card__amount">2500</span>
+              <span class="price-card__unit">₸/мес</span>
+            </div>
+          </div>
+          <ul class="price-card__features">
+            <li>Безлимитное время</li>
+            <li>Доступ ко всем зонам</li>
+            <li>Любая периферия</li>
+            <li>Полная библиотека</li>
+            <li>Приоритетная бронь</li>
+            <li>2 коуч-сессии / мес</li>
+          </ul>
+          <a href="#contact" class="btn btn--ghost w-full">Выбрать</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee-wrap">
+    <div class="marquee">
+      <span>CS2</span><span>·</span>
+      <span>DOTA 2</span><span>·</span>
+      <span>VALORANT</span><span>·</span>
+      <span>CYBERPUNK 2077</span><span>·</span>
+      <span>FORTNITE</span><span>·</span>
+      <span>APEX LEGENDS</span><span>·</span>
+      <span>CALL OF DUTY</span><span>·</span>
+      <span>GTA VI</span><span>·</span>
+      <span>CS2</span><span>·</span>
+      <span>DOTA 2</span><span>·</span>
+      <span>VALORANT</span><span>·</span>
+      <span>CYBERPUNK 2077</span><span>·</span>
+      <span>FORTNITE</span><span>·</span>
+      <span>APEX LEGENDS</span><span>·</span>
+      <span>CALL OF DUTY</span><span>·</span>
+      <span>GTA VI</span><span>·</span>
+    </div>
+  </div>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact__inner reveal-up">
+        <div class="section__label">Контакты</div>
+        <h2 class="section__title">Готов <span class="accent">сбежать?</span></h2>
+        <p class="contact__sub">Забронируй место прямо сейчас или свяжись с нами любым удобным способом</p>
+        <div class="contact__row">
+          <div class="contact__info">
+            <div class="contact__item">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" fill="currentColor"/></svg>
+              <span>ул. Абая, 25, Уральск</span>
+            </div>
+            <div class="contact__item">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z" fill="currentColor"/></svg>
+              <span>+7 (800) 555-ESC-APE</span>
+            </div>
+            <div class="contact__item">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>
+              <span>play@escape-club.ru</span>
+            </div>
+            <div class="contact__socials">
+              <a href="#" class="social-btn" aria-label="Telegram">TG</a>
+              <a href="#" class="social-btn" aria-label="VK">VK</a>
+              <a href="#" class="social-btn" aria-label="Discord">DC</a>
+              <a href="#" class="social-btn" aria-label="Twitch">TV</a>
+            </div>
+          </div>
+          <form class="contact__form" id="contactForm">
+            <input type="text" placeholder="Ваше имя" required />
+            <input type="tel" placeholder="Телефон" required />
+            <select>
+              <option value="" disabled selected>Выберите зону</option>
+              <option>Standard</option>
+              <option>Pro</option>
+              <option>VR Arena</option>
+              <option>Streamer Box</option>
+            </select>
+            <textarea placeholder="Комментарий (необязательно)" rows="3"></textarea>
+            <button type="submit" class="btn btn--primary w-full">Забронировать место</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__logo">ESC<span class="accent">APE</span></div>
+        <p class="footer__copy">© 2026 ESCAPE Gaming Club. Все права защищены.</p>
+        <div class="footer__links">
+          <a href="#">Политика конфиденциальности</a>
+          <a href="#">Правила клуба</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
