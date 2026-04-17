@@ -534,7 +534,7 @@ em { font-style: normal; color: var(--purple3); }
 .pricing__scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 8px;
+  padding: 20px 0 8px;
 }
 .pricing__scroll::-webkit-scrollbar { height: 4px; }
 .pricing__scroll::-webkit-scrollbar-track { background: var(--dark2); border-radius: 2px; }
