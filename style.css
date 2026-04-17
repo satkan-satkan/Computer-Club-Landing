@@ -547,8 +547,8 @@ em { font-style: normal; color: var(--purple3); }
   align-items: stretch;
 }
 .pricing__grid .price-card {
-  flex: 0 0 255px;
-  width: 255px;
+  flex: 0 0 310px;
+  width: 310px;
   display: flex;
   flex-direction: column;
 }
