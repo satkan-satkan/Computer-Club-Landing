@@ -531,13 +531,13 @@ em { font-style: normal; color: var(--purple3); }
    ============================================================ */
 .pricing { background: var(--dark); }
 .pricing__grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  gap: 24px; align-items: start;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 20px; align-items: start;
 }
 
 .price-card {
   background: var(--dark2); border: 1px solid var(--border2);
-  border-radius: var(--r2); padding: 36px 28px;
+  border-radius: var(--r2); padding: 28px 22px;
   position: relative; transition: all .3s var(--ease);
 }
 .price-card:hover { border-color: var(--border); transform: translateY(-4px); }
@@ -568,7 +568,7 @@ em { font-style: normal; color: var(--purple3); }
 }
 .price-card__amount {
   font-family: 'Orbitron', monospace;
-  font-size: 3rem; font-weight: 900; color: #fff;
+  font-size: 2.4rem; font-weight: 900; color: #fff;
   line-height: 1;
 }
 .price-card__unit { color: var(--text3); font-size: .85rem; }
@@ -717,6 +717,11 @@ em { font-style: normal; color: var(--purple3); }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+@media (max-width: 1200px) {
+  .pricing__grid { grid-template-columns: repeat(2, 1fr); }
+  .price-card--featured { transform: none; }
+}
+
 @media (max-width: 1024px) {
   .about__grid { grid-template-columns: 1fr; gap: 48px; }
   .features__grid { grid-template-columns: repeat(2, 1fr); }
