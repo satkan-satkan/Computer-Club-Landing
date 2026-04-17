@@ -540,10 +540,14 @@ em { font-style: normal; color: var(--purple3); }
 .pricing__scroll::-webkit-scrollbar-track { background: var(--dark2); border-radius: 2px; }
 .pricing__scroll::-webkit-scrollbar-thumb { background: var(--purple); border-radius: 2px; }
 .pricing__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 260px);
-  gap: 14px; align-items: start;
-  min-width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 14px;
+  align-items: start;
+}
+.pricing__grid .price-card {
+  flex: 0 0 260px;
+  width: 260px;
 }
 
 .price-card {
