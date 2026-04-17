@@ -229,63 +229,115 @@
         <div class="section__label">Тарифы</div>
         <h2 class="section__title">Прозрачные <span class="accent">цены</span></h2>
       </div>
-      <div class="pricing__grid">
-        <div class="price-card reveal-up" style="--delay:0s">
-          <div class="price-card__header">
-            <div class="price-card__name">STANDARD</div>
-            <div class="price-card__price">
-              <span class="price-card__amount">800</span>
-              <span class="price-card__unit">₸/час</span>
-            </div>
-          </div>
-          <ul class="price-card__features">
-            <li>i7 + RTX 3080</li>
-            <li>Монитор 144 Гц</li>
-            <li>Стандартная периферия</li>
-            <li>Доступ к Steam библиотеке</li>
-            <li class="disabled">Приоритетная бронь</li>
-            <li class="disabled">Персональный коуч</li>
-          </ul>
-          <a href="#contact" class="btn btn--ghost w-full">Выбрать</a>
-        </div>
-        <div class="price-card price-card--featured reveal-up" style="--delay:.1s">
-          <div class="price-card__badge">Популярный</div>
-          <div class="price-card__header">
-            <div class="price-card__name">PRO</div>
-            <div class="price-card__price">
-              <span class="price-card__amount">1200</span>
-              <span class="price-card__unit">₸/час</span>
-            </div>
-          </div>
-          <ul class="price-card__features">
-            <li>i9 + RTX 4090</li>
-            <li>Монитор 240 Гц IPS</li>
-            <li>Razer / SteelSeries периферия</li>
-            <li>Доступ ко всей библиотеке</li>
-            <li>Приоритетная бронь</li>
-            <li class="disabled">Персональный коуч</li>
-          </ul>
-          <a href="#contact" class="btn btn--primary w-full">Выбрать</a>
-        </div>
-        <div class="price-card reveal-up" style="--delay:.2s">
-          <div class="price-card__header">
-            <div class="price-card__name">UNLIMITED</div>
-            <div class="price-card__price">
-              <span class="price-card__amount">2500</span>
-              <span class="price-card__unit">₸/мес</span>
-            </div>
-          </div>
-          <ul class="price-card__features">
-            <li>Безлимитное время</li>
-            <li>Доступ ко всем зонам</li>
-            <li>Любая периферия</li>
-            <li>Полная библиотека</li>
-            <li>Приоритетная бронь</li>
-            <li>2 коуч-сессии / мес</li>
-          </ul>
-          <a href="#contact" class="btn btn--ghost w-full">Выбрать</a>
+
+      <!-- Tabs -->
+      <div class="price-tabs reveal-up">
+        <button class="price-tab active" data-tab="packages">Пакеты</button>
+        <button class="price-tab" data-tab="time">По времени</button>
+      </div>
+
+      <!-- TABLE: PACKAGES -->
+      <div class="price-table-wrap reveal-up" id="tab-packages">
+        <div class="price-table-scroll">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th class="price-table__pkg">ПАКЕТЫ</th>
+                <th>ARENA</th>
+                <th>VIP</th>
+                <th>BOOT CAMP</th>
+                <th class="price-table__duo">DUO SPACE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="price-table__label">1 час</td>
+                <td>1 200 ₸</td>
+                <td>1 500 ₸</td>
+                <td>2 000 ₸</td>
+                <td>2 100 ₸</td>
+              </tr>
+              <tr>
+                <td class="price-table__label">2 + 1 <span>час бесплатно</span></td>
+                <td>2 000 ₸</td>
+                <td>3 000 ₸</td>
+                <td>4 000 ₸</td>
+                <td>4 200 ₸</td>
+              </tr>
+              <tr>
+                <td class="price-table__label">3 + 2 <span>часа бесплатно</span></td>
+                <td>2 000 ₸</td>
+                <td>3 000 ₸</td>
+                <td>4 000 ₸</td>
+                <td>6 300 ₸</td>
+              </tr>
+              <tr>
+                <td class="price-table__label">4 + 3 <span>часа бесплатно</span></td>
+                <td>4 000 ₸</td>
+                <td>6 000 ₸</td>
+                <td>6 000 ₸</td>
+                <td>8 400 ₸</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
+
+      <!-- TABLE: TIME OF DAY -->
+      <div class="price-table-wrap reveal-up" id="tab-time" style="display:none">
+        <div class="price-table-scroll">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th class="price-table__pkg">ПАКЕТЫ</th>
+                <th>ARENA</th>
+                <th>VIP</th>
+                <th>BOOT CAMP</th>
+                <th class="price-table__duo">DUO SPACE</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="price-table__label">УТРО <span>до 14:00</span></td>
+                <td>1 200 ₸</td>
+                <td>1 500 ₸</td>
+                <td>2 000 ₸</td>
+                <td>2 100 ₸</td>
+              </tr>
+              <tr>
+                <td class="price-table__label">ДЕНЬ <span>14:00 – 18:00</span></td>
+                <td>1 300 ₸</td>
+                <td>1 500 ₸</td>
+                <td>2 500 ₸</td>
+                <td>2 700 ₸</td>
+              </tr>
+              <tr>
+                <td class="price-table__label">НОЧЬ <span>00:00 – 08:00</span></td>
+                <td>1 300 ₸</td>
+                <td>1 500 ₸</td>
+                <td>2 500 ₸</td>
+                <td>2 700 ₸</td>
+              </tr>
+              <tr class="price-table__highlight">
+                <td class="price-table__label">TURBO <span>3 часа</span></td>
+                <td>2 500 ₸</td>
+                <td>3 500 ₸</td>
+                <td>5 000 ₸</td>
+                <td>5 000 ₸</td>
+              </tr>
+              <tr class="price-table__highlight">
+                <td class="price-table__label">СУТКИ <span>24 часа</span></td>
+                <td>6 500 ₸</td>
+                <td>10 000 ₸</td>
+                <td>15 000 ₸</td>
+                <td>15 000 ₸</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <p class="pricing__note reveal-up">* Цены указаны за одно место. DUO SPACE — двухместная зона.</p>
     </div>
   </section>
 
@@ -322,21 +374,25 @@
           <div class="contact__info">
             <div class="contact__item">
               <svg viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z" fill="currentColor"/></svg>
-              <span>ул. Абая, 25, Уральск</span>
+              <span>ЖК «Тумар», Досмухамедова 20, Уральск</span>
             </div>
             <div class="contact__item">
               <svg viewBox="0 0 24 24" fill="none"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1C10.61 21 3 13.39 3 4c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.24 1.02l-2.21 2.2z" fill="currentColor"/></svg>
-              <span>+7 (800) 555-ESC-APE</span>
+              <span>+7 775 413 94 00</span>
             </div>
             <div class="contact__item">
               <svg viewBox="0 0 24 24" fill="none"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>
               <span>play@escape-club.ru</span>
             </div>
             <div class="contact__socials">
-              <a href="#" class="social-btn" aria-label="Telegram">TG</a>
-              <a href="#" class="social-btn" aria-label="VK">VK</a>
-              <a href="#" class="social-btn" aria-label="Discord">DC</a>
-              <a href="#" class="social-btn" aria-label="Twitch">TV</a>
+              <a href="https://www.instagram.com/escape_uralsk/" target="_blank" rel="noopener" class="social-btn social-btn--ig" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+                <span>Instagram</span>
+              </a>
+              <a href="https://wa.me/77754139400" target="_blank" rel="noopener" class="social-btn social-btn--wa" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="none" width="18" height="18"><path d="M20.52 3.48A11.93 11.93 0 0012.02 0C5.44 0 .08 5.35.08 11.93c0 2.1.55 4.15 1.6 5.96L0 24l6.27-1.64a11.97 11.97 0 005.73 1.46h.01c6.57 0 11.93-5.35 11.93-11.93 0-3.19-1.24-6.18-3.42-8.37zm-8.5 18.35h-.01a9.93 9.93 0 01-5.06-1.39l-.36-.22-3.74.98 1-3.64-.24-.38a9.89 9.89 0 01-1.52-5.27c0-5.46 4.45-9.91 9.93-9.91 2.65 0 5.14 1.03 7.01 2.91a9.86 9.86 0 012.9 7c0 5.47-4.45 9.92-9.91 9.92zm5.44-7.42c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15s-.77.97-.94 1.17c-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.61-.91-2.2-.24-.58-.49-.5-.67-.51H7.9c-.17 0-.45.06-.69.32-.23.25-.9.88-.9 2.14s.92 2.49 1.05 2.66c.13.17 1.81 2.76 4.38 3.87.61.26 1.09.42 1.46.54.61.19 1.17.17 1.61.1.49-.07 1.51-.62 1.72-1.22.21-.6.21-1.11.15-1.22-.06-.1-.23-.16-.53-.3z" fill="currentColor"/></svg>
+                <span>WhatsApp</span>
+              </a>
             </div>
           </div>
           <form class="contact__form" id="contactForm">

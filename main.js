@@ -2,6 +2,17 @@
    ESCAPE — Gaming Club Landing  |  main.js
    ============================================================ */
 
+/* ---------- Pricing tabs ---------------------------------- */
+document.querySelectorAll('.price-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.price-tab').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const target = btn.dataset.tab;
+    document.getElementById('tab-packages').style.display = target === 'packages' ? '' : 'none';
+    document.getElementById('tab-time').style.display = target === 'time' ? '' : 'none';
+  });
+});
+
 /* ---------- NAV scroll effect ----------------------------- */
 const nav = document.getElementById('nav');
 window.addEventListener('scroll', () => {
