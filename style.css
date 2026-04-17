@@ -530,9 +530,10 @@ em { font-style: normal; color: var(--purple3); }
    PRICING
    ============================================================ */
 .pricing { background: var(--dark); }
+.pricing .container { max-width: 1440px; }
 .pricing__grid {
   display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 20px; align-items: start;
+  gap: 16px; align-items: start;
 }
 
 .price-card {
