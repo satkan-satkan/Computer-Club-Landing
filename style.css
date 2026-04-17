@@ -546,9 +546,8 @@ em { font-style: normal; color: var(--purple3); }
   background: linear-gradient(145deg, rgba(124,58,237,.12), var(--dark2));
   border-color: var(--purple);
   box-shadow: 0 0 60px rgba(124,58,237,.2);
-  transform: scale(1.03);
 }
-.price-card--featured:hover { transform: scale(1.03) translateY(-4px); }
+.price-card--featured:hover { transform: translateY(-4px); }
 
 .price-card__badge {
   position: absolute; top: -12px; left: 50%; transform: translateX(-50%);
@@ -717,10 +716,6 @@ em { font-style: normal; color: var(--purple3); }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
-@media (max-width: 1200px) {
-  .pricing__grid { grid-template-columns: repeat(2, 1fr); }
-  .price-card--featured { transform: none; }
-}
 
 @media (max-width: 1024px) {
   .about__grid { grid-template-columns: 1fr; gap: 48px; }
